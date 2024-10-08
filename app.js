@@ -17,7 +17,7 @@ function criaCartão(categoria,pergunta,resposta){
 
     let respostaEstaVisivel= false
 
-    function viraCartão(){
+    function viraCartão() {
         respostaEstaVisivel= !respostaEstaVisivel
         cartão.classList.toggle('active', respostaEstaVisivel)
     }
