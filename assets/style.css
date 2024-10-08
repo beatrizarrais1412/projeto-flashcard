@@ -75,7 +75,7 @@ body {
     box-sizing: border-box;
 }
 
-.cartão_conteudo_resposta{
+.cartão_conteudo_resposta {
     transform: rotateY( 180deg);
     background-color: #00F4BF;
     border: 4px solid var(--card-back-color);
