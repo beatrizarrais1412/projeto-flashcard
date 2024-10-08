@@ -14,6 +14,16 @@ function criaCartão(categoria,pergunta,resposta){
     </div>
     </div>
     `
-    container.appendChild(cartã0)
-    console.log(categoria,pergunta,resposta)  
+
+    let respostaEstaVisivel= false
+
+    function viraCartão(){
+        respostaEstaVisivel= !respostaEstaVisivel
+        cartão.classList.toggle('active', respostaEstaVisivel)
+    }
+    cartão.addEventListener('click', viraCartão)
+
+
+    container.appendChild(cartão)
+ 
 }

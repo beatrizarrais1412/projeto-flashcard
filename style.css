@@ -7,8 +7,6 @@
 body{
     background: url('IMG/bg-desktop.webp');
     font-family: Bai Jamjuree;
-    background-color: bisque;
-    font-family: Bai Jsmjuree;
 }
 
 #container {
@@ -19,13 +17,8 @@ body{
     gap: 3rem;
 }
 
-#container{
-    display: flex; /*Elementos dispostos em linha*/
-}
-
 .cartão{
     margin: 1rem 1rem;
-    background-color: aqua;
     height: 20rem;
     flex-grow: 1;
     flex-basis:calc(33% - 6rem);
@@ -43,7 +36,6 @@ body{
 .cartão_conteúdo h3{
     color: var(--text-color);
     border: 1px solid var(--text-color);
-    background-color: tomato;
     text-align:left;
     padding:0.5rem;
     position:absolute;
@@ -57,12 +49,12 @@ body{
     margin-top: 1rem;
     padding: 2rem;
     margin-top: 4rem;
+    font-size: 1.4vw;
 }
 
 .cartão_conteúdo_pergunta p{
     color: var(--text-color);
     font-weight: 500;
-
 }
 
 .cartão_conteudo_resposta p {
@@ -70,7 +62,7 @@ body{
     font-weight: 700;
 }
 
-.cartaão:hover .cartão_conteúdo{
+.cartão.active .cartão_conteúdo{
     transform: rotateY(180deg);
 }
 
@@ -80,12 +72,14 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .cartão_conteudo_resposta{
     transform: rotateY( 180deg);
+    background-color: #00F4BF;
+    border: 4px solid var(--card-back-color);
 }
-
 
 footer{
     background-color: black;
@@ -94,11 +88,29 @@ footer{
     bottom: 0;
     width: 100%;
     height: 2rem;
-
 }
 
 footer p{
     text-align: center;
     font-size: 0.6rem;
     margin-top:0.5rem;
+}
+
+@media(max-width:560px){
+
+    body{
+        background:url('img/bg-mobile.webp'), no-repeat cover;
+    }
+
+    .cartão{
+        flex: 1 0 calc(100% - 1rem)
+    }
+
+    .cartão_conteúo h3{
+        font-size: 3vw;
+    }
+
+    .cartão_conteúo p{
+        font-size: 3.8vw;
+    }
 }
